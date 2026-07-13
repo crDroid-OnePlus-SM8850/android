@@ -37,7 +37,7 @@ Create a workspace and initialize the crDroid 16.0 manifest:
 ```bash
 mkdir -p ~/crDroid
 cd ~/crDroid
-repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
+repo init -u https://github.com/crDroid-OnePlus-SM8850/android.git -b 16.0 --git-lfs --no-clone-bundle
 ```
 
 Sync the source tree (may take a long time on first run):
@@ -63,7 +63,7 @@ Build using:
 ```bash
 brunch <devicecodename>
 ```
-(Replace `<devicecodename>` with your device codename, e.g. `caiman`, `lemonadep`, etc.)
+(Replace `<devicecodename>` with your device codename, e.g. `infiniti` (OnePlus 15), `macan` (OnePlus 15R), `macanc` (OnePlus Ace 6T), `fairlady` (OnePlus 15T), etc.)
 
 Troubleshooting tips:
 - Out-of-disk-space: ensure enough free space (Android tree can require 100+ GB).
