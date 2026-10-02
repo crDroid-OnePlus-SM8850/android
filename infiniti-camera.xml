@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <include name="default.xml" />
+  <remote name="infiniti-camera" fetch="https://github.com/" />
+
+  <!-- One squashed camera commit per source repository, based on its current baseline. -->
+  <remove-project name="crdroidandroid/android_build_soong" />
+  <project path="build/soong" name="crDroid-OnePlus-SM8850/android_build_soong" remote="infiniti-camera" groups="pdk,tradefed,sysui-studio" revision="ece97d0601beb843eb1e76f7de470cce0ec8760a" upstream="fix/280-infiniti-camera" />
+  <remove-project name="crDroid-OnePlus-SM8850/android_frameworks_base" />
+  <project path="frameworks/base" name="crDroid-OnePlus-SM8850/android_frameworks_base" remote="infiniti-camera" groups="pdk-cw-fs,pdk-fs,sysui-studio" revision="7561ce8fc3ceaebcbabca2f8f1885febdbe73601" upstream="fix/280-infiniti-camera" />
+  <remove-project name="crDroid-OnePlus-SM8850/android_frameworks_native" />
+  <project path="frameworks/native" name="crDroid-OnePlus-SM8850/android_frameworks_native" remote="infiniti-camera" groups="pdk" revision="8bf2597c09c2c375c8d85b93bd8095bc06c2fab0" upstream="fix/280-infiniti-camera" />
+  <remove-project name="crdroidandroid/android_frameworks_av" />
+  <project path="frameworks/av" name="crDroid-OnePlus-SM8850/android_frameworks_av" remote="infiniti-camera" groups="pdk,sysui-studio" revision="497a9597572199c055a444815dc7fcfb1641e552" upstream="fix/280-infiniti-camera" />
+  <remove-project name="crDroid-OnePlus-SM8850/android_device_oneplus_infiniti" />
+  <project path="device/oneplus/infiniti" name="crDroid-OnePlus-SM8850/android_device_oneplus_infiniti" remote="infiniti-camera" revision="7e04b81b70659232030e2afe8fb0f70633e2dcca" upstream="fix/280-infiniti-camera" />
+  <remove-project name="crDroid-OnePlus-SM8850/android_device_oneplus_sm8850-common" />
+  <project path="device/oneplus/sm8850-common" name="crDroid-OnePlus-SM8850/android_device_oneplus_sm8850-common" remote="infiniti-camera" revision="71a57c8a0556014b2221dfaf8d30ef9c29bede07" upstream="fix/280-infiniti-camera" />
+  <remove-project name="crDroid-OnePlus-SM8850/android_hardware_oplus" />
+  <project path="hardware/oplus" name="crDroid-OnePlus-SM8850/android_hardware_oplus" remote="infiniti-camera" revision="e8bd158806d5f9e9a7e1746d8ea76a45b809ce75" upstream="fix/280-infiniti-camera" />
+  <remove-project name="crDroid-OnePlus-SM8850/android_device_qcom_sepolicy_vndr" />
+  <project path="device/qcom/sepolicy_vndr/sm8850" name="crDroid-OnePlus-SM8850/android_device_qcom_sepolicy_vndr" remote="infiniti-camera" groups="qcom,kaanapali-vendor" revision="6ff749f1a9d04c31d94ed2b5b92543d7365af65a" upstream="fix/280-infiniti-camera" />
+  <remove-project name="crdroidandroid/android_packages_apps_Sandbox" />
+  <project path="packages/apps/Sandbox" name="crDroid-OnePlus-SM8850/android_packages_apps_Sandbox" remote="infiniti-camera" revision="e88650704383b965eb8833f80109ee33b463a0db" upstream="fix/280-infiniti-camera" />
+
+  <!-- Existing split camera source and donor payloads; no new proprietary blobs. -->
+  <project path="vendor/oneplus/camera-sm8850-common" name="crDroid-OnePlus-SM8850/vendor_oneplus_camera-sm8850-common" remote="infiniti-camera" revision="16b5785c5b4a7e74eda3badf7be0e82d878803c2" upstream="fix/280-infiniti-camera" />
+  <project path="vendor/oneplus/camera-infiniti" name="infiniti-camera-port/vendor_oneplus_camera-infiniti" remote="infiniti-camera" revision="e57bdeb1ae75c7aa1c2a0577f4a1d14d152a3fa4" upstream="16.0" />
+  <project path="proprietary/vendor/oneplus/camera-sm8850-common" name="infiniti-camera-port/proprietary_vendor_oneplus_camera-sm8850-common" remote="infiniti-camera" revision="c9b0760407740e8853bbf660bddc3d407efe09d3" upstream="16.0" />
+  <project path="proprietary/vendor/oneplus/camera-infiniti" name="infiniti-camera-port/proprietary_vendor_oneplus_camera-infiniti" remote="infiniti-camera" revision="31aa2b78ec6b2cee85d446db176e39441c45c7ba" upstream="16.0" />
+</manifest>
