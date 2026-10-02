@@ -7,7 +7,7 @@
   <remove-project name="crdroidandroid/android_build_soong" />
   <project path="build/soong" name="crDroid-OnePlus-SM8850/android_build_soong" remote="infiniti-camera" groups="pdk,tradefed,sysui-studio" revision="ece97d0601beb843eb1e76f7de470cce0ec8760a" upstream="fix/280-infiniti-camera" />
   <remove-project name="crDroid-OnePlus-SM8850/android_frameworks_base" />
-  <project path="frameworks/base" name="crDroid-OnePlus-SM8850/android_frameworks_base" remote="infiniti-camera" groups="pdk-cw-fs,pdk-fs,sysui-studio" revision="7561ce8fc3ceaebcbabca2f8f1885febdbe73601" upstream="fix/280-infiniti-camera" />
+  <project path="frameworks/base" name="crDroid-OnePlus-SM8850/android_frameworks_base" remote="infiniti-camera" groups="pdk-cw-fs,pdk-fs,sysui-studio" revision="d4cbbbdc3c2a4c3347027822db207f77e5339b70" upstream="fix/280-infiniti-camera" />
   <remove-project name="crDroid-OnePlus-SM8850/android_frameworks_native" />
   <project path="frameworks/native" name="crDroid-OnePlus-SM8850/android_frameworks_native" remote="infiniti-camera" groups="pdk" revision="8bf2597c09c2c375c8d85b93bd8095bc06c2fab0" upstream="fix/280-infiniti-camera" />
   <remove-project name="crdroidandroid/android_frameworks_av" />

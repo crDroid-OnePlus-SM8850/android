@@ -1,9 +1,11 @@
 # Infiniti camera test topic
 
 `fix/280-infiniti-camera` consolidates the existing Oplus camera stack into one
-commit per source repository. `infiniti-camera.xml` selects the ten source
-commits and the existing split camera donor payloads by SHA. The current
-baseline changes in each fork are retained. Old camera branches are untouched.
+camera commit per source repository. Frameworks/base additionally carries the
+existing SQLite bracket-validation prerequisite required by current
+ContactsProvider. `infiniti-camera.xml` selects the ten source heads and the
+existing split camera donor payloads by SHA. The current baseline changes in
+each fork are retained. Old camera branches are untouched.
 
 Includes the zoom-result fix, HFR batch crop reuse, stabilized-result handling,
 sensorbridge module separation, real UAH dependencies and DSP policy, plus the
@@ -77,7 +79,15 @@ integrated Infiniti tree with `libcameraservice`, `cameraservice_test_host` and
 `selinux_policy`. All 10 `ZoomRatioTest.*` cases passed on both x86 and x86_64.
 The temporary source overlay was then restored. This is targeted host coverage,
 not a fresh full-ROM build of this manifest. The manifest itself resolves to
-1,202 unique projects, with all ten camera source SHAs verified.
+1,202 unique projects, with all ten source SHAs verified, and its published
+entry point was initialized successfully in a fresh metadata-only checkout.
+
+The SQLite prerequisite is the same patch already used in the integrated tree,
+original local commit `bbf3da25cc9ba22c131faaba64768a52b3e5959c` (upstream
+`5a73367d5b3a65f760cfcf639d425957d9e143fa`). Its tokenizer and test sources are
+byte-identical to that existing implementation. All 10 tokenizer tests passed
+on the host JVM, omitting only Android annotations and the AndroidJUnit runner;
+this does not claim an Android instrumented test run.
 
 The camera implementation, including the two follow-ups, is retained without
 additional algorithm changes. The squash resolves only two baseline overlaps:
